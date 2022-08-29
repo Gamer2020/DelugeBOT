@@ -8,6 +8,8 @@ Public Class MnFrm
 
     Private Sub MnFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        ComboBoxMode.SelectedIndex = 0
+
         If Not System.IO.File.Exists(config_file) Then
             WriteString(config_file, "User", "UserName", "")
             WriteString(config_file, "User", "PassWord", "")
@@ -29,5 +31,21 @@ Public Class MnFrm
 
     Private Sub WebBrowserView_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs) Handles WebBrowserView.Navigated
         CurURLTextBox.Text = WebBrowserView.Url.ToString
+    End Sub
+
+    Private Sub ButtonStart_Click(sender As Object, e As EventArgs) Handles ButtonStart.Click
+        ButtonStart.Enabled = False
+        ComboBoxMode.Enabled = False
+        CurURLTextBox.Enabled = False
+        ButtonGo.Enabled = False
+        ButtonStop.Enabled = True
+    End Sub
+
+    Private Sub ButtonStop_Click(sender As Object, e As EventArgs) Handles ButtonStop.Click
+        ButtonStart.Enabled = True
+        ComboBoxMode.Enabled = True
+        CurURLTextBox.Enabled = True
+        ButtonGo.Enabled = True
+        ButtonStop.Enabled = False
     End Sub
 End Class

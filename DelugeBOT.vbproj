@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BOT.vb" />
     <Compile Include="INI.vb" />
     <Compile Include="mMain.vb" />
     <Compile Include="MnFrm.vb">

@@ -34,6 +34,11 @@ Partial Class MnFrm
         Me.WebBrowserView = New System.Windows.Forms.WebBrowser()
         Me.CurURLTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.ButtonGo = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ComboBoxMode = New System.Windows.Forms.ToolStripComboBox()
+        Me.ButtonStart = New System.Windows.Forms.ToolStripButton()
+        Me.ButtonStop = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -81,12 +86,12 @@ Partial Class MnFrm
         'UserToolStripMenuItem
         '
         Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
-        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(97, 22)
+        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UserToolStripMenuItem.Text = "User"
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurURLTextBox, Me.ButtonGo})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CurURLTextBox, Me.ButtonGo, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.ComboBoxMode, Me.ButtonStart, Me.ButtonStop})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1077, 25)
@@ -117,6 +122,43 @@ Partial Class MnFrm
         Me.ButtonGo.Name = "ButtonGo"
         Me.ButtonGo.Size = New System.Drawing.Size(26, 22)
         Me.ButtonGo.Text = "Go"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(41, 22)
+        Me.ToolStripLabel1.Text = "Mode:"
+        '
+        'ComboBoxMode
+        '
+        Me.ComboBoxMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxMode.Items.AddRange(New Object() {"Battle Trainer"})
+        Me.ComboBoxMode.Name = "ComboBoxMode"
+        Me.ComboBoxMode.Size = New System.Drawing.Size(200, 25)
+        '
+        'ButtonStart
+        '
+        Me.ButtonStart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ButtonStart.Image = CType(resources.GetObject("ButtonStart.Image"), System.Drawing.Image)
+        Me.ButtonStart.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ButtonStart.Name = "ButtonStart"
+        Me.ButtonStart.Size = New System.Drawing.Size(35, 22)
+        Me.ButtonStart.Text = "Start"
+        '
+        'ButtonStop
+        '
+        Me.ButtonStop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ButtonStop.Enabled = False
+        Me.ButtonStop.Image = CType(resources.GetObject("ButtonStop.Image"), System.Drawing.Image)
+        Me.ButtonStop.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ButtonStop.Name = "ButtonStop"
+        Me.ButtonStop.Size = New System.Drawing.Size(35, 22)
+        Me.ButtonStop.Text = "Stop"
         '
         'MnFrm
         '
@@ -150,4 +192,9 @@ Partial Class MnFrm
     Friend WithEvents CurURLTextBox As ToolStripTextBox
     Friend WithEvents ButtonGo As ToolStripButton
     Friend WithEvents WebBrowserView As WebBrowser
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents ComboBoxMode As ToolStripComboBox
+    Friend WithEvents ButtonStart As ToolStripButton
+    Friend WithEvents ButtonStop As ToolStripButton
 End Class
