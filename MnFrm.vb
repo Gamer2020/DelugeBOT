@@ -22,4 +22,12 @@ Public Class MnFrm
     Private Sub UserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UserToolStripMenuItem.Click
         UserSettings.Show()
     End Sub
+
+    Private Sub ButtonGo_Click(sender As Object, e As EventArgs) Handles ButtonGo.Click
+        WebBrowserView.Navigate(CurURLTextBox.Text)
+    End Sub
+
+    Private Sub WebBrowserView_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs) Handles WebBrowserView.Navigated
+        CurURLTextBox.Text = WebBrowserView.Url.ToString
+    End Sub
 End Class
