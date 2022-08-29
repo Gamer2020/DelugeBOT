@@ -22,6 +22,7 @@ Partial Class MnFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MnFrm))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,6 +40,9 @@ Partial Class MnFrm
         Me.ComboBoxMode = New System.Windows.Forms.ToolStripComboBox()
         Me.ButtonStart = New System.Windows.Forms.ToolStripButton()
         Me.ButtonStop = New System.Windows.Forms.ToolStripButton()
+        Me.PauseTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TrainerBattleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -78,7 +82,7 @@ Partial Class MnFrm
         '
         'SettingsToolStripMenuItem
         '
-        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserToolStripMenuItem})
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserToolStripMenuItem, Me.ToolStripMenuItem2, Me.TrainerBattleToolStripMenuItem})
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.SettingsToolStripMenuItem.Text = "Settings"
@@ -137,7 +141,7 @@ Partial Class MnFrm
         'ComboBoxMode
         '
         Me.ComboBoxMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBoxMode.Items.AddRange(New Object() {"Battle Trainer"})
+        Me.ComboBoxMode.Items.AddRange(New Object() {"Trainer Battle"})
         Me.ComboBoxMode.Name = "ComboBoxMode"
         Me.ComboBoxMode.Size = New System.Drawing.Size(200, 25)
         '
@@ -159,6 +163,17 @@ Partial Class MnFrm
         Me.ButtonStop.Name = "ButtonStop"
         Me.ButtonStop.Size = New System.Drawing.Size(35, 22)
         Me.ButtonStop.Text = "Stop"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(177, 6)
+        '
+        'TrainerBattleToolStripMenuItem
+        '
+        Me.TrainerBattleToolStripMenuItem.Name = "TrainerBattleToolStripMenuItem"
+        Me.TrainerBattleToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TrainerBattleToolStripMenuItem.Text = "Trainer Battle"
         '
         'MnFrm
         '
@@ -197,4 +212,7 @@ Partial Class MnFrm
     Friend WithEvents ComboBoxMode As ToolStripComboBox
     Friend WithEvents ButtonStart As ToolStripButton
     Friend WithEvents ButtonStop As ToolStripButton
+    Friend WithEvents PauseTimer As Timer
+    Friend WithEvents ToolStripMenuItem2 As ToolStripSeparator
+    Friend WithEvents TrainerBattleToolStripMenuItem As ToolStripMenuItem
 End Class

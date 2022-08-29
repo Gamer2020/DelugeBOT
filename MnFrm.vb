@@ -39,6 +39,10 @@ Public Class MnFrm
         CurURLTextBox.Enabled = False
         ButtonGo.Enabled = False
         ButtonStop.Enabled = True
+
+        ModeHandler()
+
+
     End Sub
 
     Private Sub ButtonStop_Click(sender As Object, e As EventArgs) Handles ButtonStop.Click
@@ -47,5 +51,9 @@ Public Class MnFrm
         CurURLTextBox.Enabled = True
         ButtonGo.Enabled = True
         ButtonStop.Enabled = False
+    End Sub
+
+    Private Sub TrainerBattleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TrainerBattleToolStripMenuItem.Click
+        TrainerBattleSettings.Show()
     End Sub
 End Class
